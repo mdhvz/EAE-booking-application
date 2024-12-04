@@ -41,6 +41,35 @@ db.connect((err) => {
     console.log("Connected to MySQL Database.");
 });
 
+// Student login route
+app.post("/log-in", async (req, res) => {
+    const email = req.body.username;
+    const password = req.body.password;
+    try {
+        const [rows] = await db.query("SELECT email, password, name, secondary_school, student_id FROM students WHERE email = ?", [email]);
+ 
+        if (rows.length > 0) {
+            const user = rows[0];
+            const storedPassword = user.password;
+ 
+            if (password === storedPassword) {
+                req.session.userId = user.student_id;  // Storing user session data
+                // Redirect with student_id as a query parameter
+                res.redirect(/HomePage?student_id=${user.student_id});
+                console.log('isdkdkm');
+            } else {
+                res.send("Incorrect Password");
+            }
+        } else {
+            res.send("User not found");
+        }
+    } catch (err) {
+        console.error("Error querying database:", err);  // More detailed error
+        res.status(500).send("An error occurred while processing your request.");
+    }
+});
+
+
 // Staff login route
 app.post('/staff-login', upload.none(), (req, res) => {
     const { Email, password } = req.body;
