@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Set Availability - Staff View</title>
+    <link rel="stylesheet" href="css/styles.css">
+</head>
+<body>
+
+    <!-- Sidebar Navigation -->
+    <div class="sidebar">
+        <h2>Admission Portal</h2>
+        <ul>
+            <li><a href="smain.html">Dashboard</a></li>
+            <li><a href="availability.html">Set Availability</a></li>
+            <li><a href="booking.html">View Bookings</a></li>
+            <li><a href="settings.html">Settings</a></li>
+            <li><a href="attendance.html">Attendance</a></li>
+        </ul>
+        <div class="logout">
+            <a href="Index.html">Logout</a>
+        </div>
+    </div>
+
+    <!-- Main Content Area -->
+    <div class="main-content">
+        <header>
+            <h1>Set Availability</h1>
+            <p>Set your available dates and times for student interviews.</p>
+        </header>
+
+        <!-- Availability Form -->
+        <form id="availabilityForm">
+            <label for="date">Select Date:</label>
+            <input type="date" id="date" name="date" required>
+
+            <label for="start-time">Start Time:</label>
+            <input type="time" id="start-time" name="start-time" required>
+
+            <label for="end-time">End Time:</label>
+            <input type="time" id="end-time" name="end-time" required>
+
+            <label for="capacity">Capacity:</label>
+            <input type="number" id="capacity" name="capacity" value="5" required>
+
+        <button type="submit">Save Availability</button>
+    </form>
+
+
+    <section id="availabilityList">
+        <h2>Your Availability</h2>
+        <table>
+            <thead>
+                <tr>
+                    <th>Date</th>
+                    <th>Start Time</th>
+                    <th>End Time</th>
+                    <th>Capacity</th>
+                    <th>Actions</th>
+                </tr>
+            </thead>
+            <tbody id="availabilityTable">
+                <!-- Availability entries will be dynamically added here -->
+            </tbody>
+        </table>
+    </section>
+    
+    </div>
+
+    <script src="availability.js"></script>
+</body>
+</html>

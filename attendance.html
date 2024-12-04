@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Student Interview Attendance</title>
+  <link rel="stylesheet" href="css/attendance.css">
+</head>
+<body>
+  <!-- Navigation Bar -->
+  <nav class="navbar">
+    <div class="logo">TP</div>
+    <div class="nav-links">
+      <a href="smain.html" class="active">Home</a>
+      <a href="availability.html">Set Availability</a>
+      <a href="attendance.html">Attendance</a>
+      <a href="booking.html">View Bookings</a>
+      <a href="#">Settings</a>
+    </div>
+    <div class="profile">
+      <img src="images/receptionist.png" alt="Profile" class="profile-pic">
+    </div>
+  </nav>
+
+  <!-- Main Container -->
+  <div class="container">
+    <h1>Student Interview Attendance</h1>
+    <div class="attendance-table">
+      <table>
+        <thead>
+          <tr>
+            <th>Student ID</th>
+            <th>Student Name</th>
+            <th>Email</th>
+            <th>Date</th>
+            <th>Time</th>
+            <th>Status</th>
+            <th>Details</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td>12</td>
+            <td>John Doe</td>
+            <td>john@gmail.com</td>
+            <td>2024-12-04</td>
+            <td>17:00</td>
+            <td><span class="status on-time">Present</span></td>
+            <td><button class="details">View</button></td>
+          </tr>
+          <tr>
+            <td>49</td>
+            <td>Jane Smith</td>
+            <td>jane@gmail.com</td>
+            <td>2024-12-04</td>
+            <td>18:00</td>
+            <td><span class="status late">Absent</span></td>
+            <td><button class="details">View</button></td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
+
+
+

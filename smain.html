@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Student Admission Portal - Staff View</title>
+    <link rel="stylesheet" href="css/styles.css">
+</head>
+<body>
+
+    <!-- Sidebar Navigation -->
+    <div class="sidebar">
+        <h2>Admission Portal</h2>
+        <ul>
+            <li><a href="smain.html">Dashboard</a></li>
+            <li><a href="availability.html">Set Availability</a></li>
+            <li><a href="booking.html">View Bookings</a></li>
+            <li><a href="#settings">Settings</a></li>
+            <li><a href="attendance.html">Attendance</a></li>
+        </ul>
+        <div class="logout">
+            <a href="Index.html">Logout</a>
+        </div>
+    </div>
+
+    <!-- Main Content Area -->
+    <div class="main-content">
+        <header>
+            <h1>Welcome, [Staff Name]</h1>
+            <input type="text" id="studentSearch" placeholder="Search student by name or ID...">
+        </header>
+
+        <div class="dashboard">
+            <h2>Admissions Overview</h2>
+            <div class="card-container">
+                <div class="card" id="totalApplications">
+                    <h3>Total Applications</h3>
+                    <p>Loading...</p>
+                </div>
+                <div class="card" id="approvedApplications">
+                    <h3>Approved Applications</h3>
+                    <p>Loading...</p>
+                </div>
+                <div class="card" id="pendingApplications">
+                    <h3>Pending Applications</h3>
+                    <p>Loading...</p>
+                </div>
+            </div>
+        </div>
+
+        <section id="applicationList">
+            <h2>Application List</h2>
+            <table>
+                <thead>
+                    <tr>
+                        <th>ID</th>
+                        <th>Name</th>
+                        <th>Course</th>
+                        <th>Status</th>
+                        <th>Actions</th>
+                    </tr>
+                </thead>
+                <tbody id="applicationsTable">
+                    <!-- Rows will be added dynamically -->
+                </tbody>
+            </table>
+        </section>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>

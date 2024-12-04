@@ -1,0 +1,197 @@
+/* Reset margin and padding for all elements */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* General body and html styles */
+body, html {
+    width: 100%;
+    height: 100%;
+    font-family: Arial, sans-serif;
+    background: linear-gradient(to right, #53503c, #4e565e); /* Dark gradient for the background */
+    color: white;
+}
+h5 {
+    text-align: center; /* Center the heading on the page */
+    color: #e9e9e9; /* Dark grey color for the text */
+    font-size: 27px; /* Large font size for visibility */
+    padding-top: 30px;
+}
+
+/* Navbar styles */
+.navbar {
+    background-color: rgba(0, 0, 0, 0.8);
+    padding: 10px 0;
+    text-align: center;
+}
+
+.navbar-container .nav-links a {
+    color: white;
+    text-decoration: none;
+    margin: 0 15px;
+    font-size: 16px;
+    transition: color 0.3s;
+}
+
+.navbar-container .nav-links a:hover {
+    color: #50c9c3;
+}
+
+/* Main frame styling */
+.main-frame {
+    border-radius: 10px;
+    padding: 20px;
+    width: 80%;
+    max-width: 1200px;
+    margin: 40px auto;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.5);
+    background-image: linear-gradient(to right, #7c796dac, #748e8aa8),
+                      url("https://images.pexels.com/photos/28977351/pexels-photo-28977351.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2");
+    background-size: contain;
+    background-position: center;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    align-items: flex-start;
+}
+
+.card {
+    flex-basis: 35%;
+    height: 450px;
+    background-color: rgba(255, 255, 255, 0.3); /* Lighter semi-transparent white */
+    background-image: linear-gradient(to bottom, #ffffff22, #f0f0f022); /* Light gradient */
+    backdrop-filter: blur(10px); /* Frosted glass effect */
+    border-radius: 10px;
+    box-shadow: 0 2px 10px rgba(0,0,0,0.2);
+    overflow: hidden;
+    margin: 20px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+}
+
+.card-inner {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    transition: transform 0.6s;
+    transform-style: preserve-3d;
+    cursor: pointer;
+}
+
+.card:hover .card-inner {
+    transform: rotateY(180deg);
+}
+
+.card-front, .card-back {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    backface-visibility: hidden;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 20px;
+    color: #333; /* Adjust text color for visibility against frosted background */
+}
+
+.card-back .important-dates table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 10px;
+}
+
+.card-back .important-dates table td {
+    padding: 5px;
+    border-bottom: 2.5px solid #982424;
+}
+
+.card-back .important-dates table tr:last-child td {
+    border-bottom: none;
+}
+
+.card-front {
+    background-color:#3232321d ;
+    color: #fbfbfb;
+}
+
+.card-back {
+    background-color: #7c838b3b;
+    color: #000000;
+    transform: rotateY(180deg);
+    overflow: auto;
+}
+
+.card-header h2 {
+    margin: 10px 0;
+    font-size: 24px;
+}
+
+.card-body p, .card-body h3, .card-body ul li {
+    margin: 10px;
+    text-align: center;
+}
+
+.card-body table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 10px;
+}
+
+.card-body table td {
+    padding: 5px;
+    border: none;
+}
+
+h3 {
+    padding: 10px 20px; /* Add padding around the text */
+    background-color: #333; /* Dark background color */
+    border-radius: 50px; /* Rounded borders */
+    color: white; /* Set text color to white for better visibility */
+    text-align: center; /* Center-align the text */
+    margin: 20px auto; /* Center the element horizontally and add some space around */
+    width: fit-content; /* This will make the background only as wide as the content + padding */
+    box-shadow: 0 4px 8px rgba(0,0,0,0.5); /* Optional: Adds shadow for better depth */
+}
+
+
+h4{
+    padding-top:20px;
+    font-size:larger;
+    font-weight:40px;
+}
+p2{
+    padding-top: 15px
+}
+p{padding-bottom: 10px;}
+
+/* Arrow styling */
+.arrow-right, .arrow-down, .arrow-left {
+    font-size: 50px; /* Arrow size */
+    color: white; /* Arrow color to stand out against the background */
+    display: flex;
+    justify-content: center; /* Center arrow horizontally */
+    align-items: center; /* Center arrow vertically */
+    height: 50px; /* Space for the arrow */
+    padding-top: 150px;
+}
+
+.arrow-right {
+    transform: rotate(0deg); /* Ensure arrow points right */
+    margin: 20px auto; /* Center between horizontal cards if needed */
+}
+
+.arrow-down {
+    transform: rotate(0deg); /* Rotate arrow to point down */
+    margin: 20px auto; /* Spacing above and below the arrow */
+}
+
+.arrow-left {
+    transform: rotate(0deg); /* Rotate arrow to point left */
+    margin: 20px auto; /* Center between horizontal cards if needed */
+}

@@ -1,0 +1,131 @@
+/* General Styles */
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f4f4f9;
+  }
+  
+  /* Navigation Bar */
+  .navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #5d9cec;
+    padding: 10px 20px;
+    color: white;
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+  }
+  
+  .logo {
+    font-size: 24px;
+    font-weight: bold;
+  }
+  
+  .nav-links {
+    display: flex;
+    gap: 20px;
+  }
+  
+  .nav-links a {
+    text-decoration: none;
+    color: white;
+    font-size: 16px;
+    transition: color 0.3s;
+  }
+  
+  
+  .profile {
+    display: flex;
+    align-items: center;
+  }
+  
+  .profile-pic {
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    border: 2px solid white;
+  }
+  
+  /* Container Styles */
+  .container {
+    max-width: 1200px;
+    margin: 20px auto;
+    background: #ffffff;
+    border-radius: 8px;
+    padding: 20px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  }
+  
+  h1 {
+    text-align: center;
+    color: #333;
+    margin-bottom: 20px;
+  }
+  
+  /* Table Styles */
+  .attendance-table {
+    border-radius: 12px;
+    overflow: hidden; /* Ensures the border radius applies to the table */
+  }
+  
+  table {
+    width: 100%;
+    border-collapse: collapse;
+    background: white;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  }
+  
+  table thead {
+    background-color: #5d9cec;
+    color: white;
+  }
+  
+  table th,
+  table td {
+    padding: 15px;
+    text-align: center;
+  }
+  
+  table tbody tr:nth-child(even) {
+    background-color: #f9f9f9;
+  }
+  
+  table tbody tr:hover {
+    background-color: #e6f7ff;
+  }
+  
+  button.details {
+    padding: 8px 12px;
+    border: none;
+    border-radius: 20px;
+    background-color: #007bff;
+    color: white;
+    cursor: pointer;
+  }
+  
+  button.details:hover {
+    background-color: #0056b3;
+  }
+  
+  /* Rounded Status Tags */
+  .status {
+    display: inline-block;
+    padding: 5px 10px;
+    border-radius: 20px;
+    font-size: 14px;
+    color: white;
+  }
+  
+  .status.on-time {
+    background-color: #28a745;
+  }
+  
+  .status.late {
+    background-color: #dc3545;
+  }
+  
+  
+

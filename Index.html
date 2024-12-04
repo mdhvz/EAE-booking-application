@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login & Sign-Up</title>
+    <link rel="stylesheet" href="Style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+</head>
+<body>
+    <button-2 id="AdminLoginButton">Admin Login</button-2>
+    <div class="container" id="container">
+        <!-- Staff Sign-In Form -->
+        <div class="form-container sign-up-container">
+            <form id="staffLoginForm" action="#">
+                <h1>Staff Sign in</h1>
+                <input type="text" id="staffEmail" name="Email" placeholder="Email" required />
+                <input type="password" id="staffPassword" name="password" placeholder="Password" required />
+                <div class="remember-me">
+                    <input type="checkbox" id="rememberSignUp" name="rememberSignUp">
+                    <label for="rememberStaffLogin">Remember Me</label>
+                </div>
+                <button type="submit">Login</button>
+                <div id="staffErrorMessage" style="color: red; display: none;">Invalid username or password.</div>
+            </form>
+        </div>
+
+        <!-- Student Sign-In Form -->
+        <div class="form-container sign-in-container">
+            <form id="studentLoginForm" action="#">
+                <h1>Student Sign in</h1>
+                <input type="email" id="studentEmail" name="email" placeholder="Email" required />
+                <input type="password" id="studentPassword" name="password" placeholder="Password" required />
+                <div class="remember-me">
+                    <input type="checkbox" id="rememberSignUp" name="rememberSignUp">
+                    <label for="rememberStudentLogin">Remember Me</label>
+                </div>
+                <button type="submit">Login</button>
+                <div id="studentErrorMessage" style="color: red; display: none;">Invalid email or password.</div>
+            </form>
+        </div>
+
+        <!-- Admin Login Form -->
+        <div id="AdminLoginForm" class="Admin-login-form">
+            <div class="left-side">
+                <i id="goBackIcon" class="fas fa-arrow-left go-back-icon" title="Go Back"></i>
+                <h1>Welcome Admin</h1>
+                <p>Access your dashboard and manage the system securely.</p>
+            </div>
+            <div class="right-side">
+                <box action="#">
+                    <h5>Admin Login</h5>
+                    <input type="text" class="custom-placeholder" placeholder="Username" required>
+                    <input type="password" class="custom-placeholder" placeholder="Password" required>
+                    <div class="remember-me">
+                        <input type="checkbox" id="remember-me" name="rememberAdminLogin">
+                        <label for="rememberAdminLogin">Remember Me</label>
+                    </div>
+                    <button>Login</button>
+                </box>
+            </div>
+        </div>
+
+        <div class="overlay-container">
+            <div class="overlay">
+                <div class="overlay-panel overlay-left">
+                    <h1>Welcome Back Student !</h1>
+                    <p>Log in to track your application progress and explore available courses</p>
+                    <button class="ghost" id="signIn">Sign In</button>
+                </div>
+                <div class="overlay-panel overlay-right">
+                    <h1>Welcome Back Teacher !</h1>
+                    <p>Please Login using your staff Credentials</p>
+                    <button class="ghost" id="signUp">Sign In</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="index.js"></script>
+</body>
+</html>
+
+

@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>View Bookings - Student Admission Portal</title>
+    <link rel="stylesheet" href="css/styles.css">
+</head>
+<body>
+
+    <!-- Sidebar Navigation -->
+    <div class="sidebar">
+        <h2>Admission Portal</h2>
+        <ul>
+            <li><a href="smain.html">Dashboard</a></li>
+            <li><a href="availability.html">Set Availability</a></li>
+            <li><a href="booking.html" class="active">View Bookings</a></li>
+            <li><a href="#settings">Settings</a></li>
+        </ul>
+        <div class="logout">
+            <a href="Index.html">Logout</a>
+        </div>
+    </div>
+
+    <!-- Main Content Area -->
+    <div class="main-content">
+        <header>
+            <h1>View Bookings</h1>
+            <input type="text" id="searchBooking" placeholder="Search by student name or ID..." onkeyup="filterBookings()">
+        </header>
+
+        <section id="bookingsSection">
+            <h2>Student Interview Bookings</h2>
+            <div class="filters">
+                <label for="dateFilter">Filter by Date:</label>
+                <input type="date" id="dateFilter" onchange="filterBookings()">
+            </div>
+            <table>
+                <thead>
+                    <tr>
+                        <th>Student ID</th>
+                        <th>Name</th>
+                        <th>Course</th>
+                        <th>Date</th>
+                        <th>Time</th>
+                        <th>Status</th>
+                    </tr>
+                </thead>
+                <tbody id="bookingsTable">
+                    <!-- Sample rows, replace these with dynamic data -->
+                    <tr>
+                        <td>12345</td>
+                        <td>John Doe</td>
+                        <td>Engineering</td>
+                        <td>2024-11-07</td>
+                        <td>10:00 AM</td>
+                        <td>Confirmed</td>
+                    </tr>
+                    <tr>
+                        <td>67890</td>
+                        <td>Jane Smith</td>
+                        <td>Business</td>
+                        <td>2024-11-07</td>
+                        <td>11:00 AM</td>
+                        <td>Pending</td>
+                    </tr>
+                    <!-- Add more rows as needed -->
+                </tbody>
+            </table>
+        </section>
+    </div>
+
+    <script src="booking.js"></script>
+</body>
+</html>

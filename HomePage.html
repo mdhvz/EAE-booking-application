@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>EAE Dashboard</title>
+    <link rel="stylesheet" href="Style2.css">
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script> <!-- Include Chart.js -->
+    <script src="js/dashboard.js" defer></script> <!-- External JS file -->
+    <script src="https://cdn.jsdelivr.net/npm/chartjs-chart-boxplot@3"></script>
+</head>
+<body>
+    <!-- Navbar -->
+    <nav class="navbar">
+        <div class="navbar-container">
+            <div class="nav-links">
+                <a href="HomePage.html">Home</a>
+                <a href="/calendar-view">Schedule Interview</a>
+                <a href="Application Procedure.html">Application Procedure</a>
+                <a href="Courses.html">Courses</a>
+                <a href="Tips.html">Tips For EAE Application</a>
+            </div>
+            <!-- Profile Dropdown -->
+            <div class="profile-dropdown">
+                <a href="index.html" class="profile-button">Logout</a>
+            </div>
+        </div>
+    </nav>
+
+    <div class="container">
+        <!-- Main Content -->
+        <main class="content">
+
+            <!-- Introduction Section -->
+            <section id="introduction" class="intro-container">
+                <h1>Welcome to Temasek Polytechnic</h1>
+                <p>
+                    Established in 1990, Temasek Polytechnic (TP) is one of Singapore's leading institutions of higher learning. 
+                    Known for its innovative curriculum and industry-relevant courses, TP offers students hands-on experiences 
+                    to prepare them for their future careers. TP emphasizes creativity, excellence, and lifelong learning, fostering 
+                    a vibrant and dynamic learning environment.
+                </p>
+               
+            </section>
+            <!-- Dashboard Section -->
+            <section id="dashboard">
+                <h2>Engineering Performance Dashboard</h2>
+
+                <div class="charts-container">
+                    <!-- Bar Chart Container -->
+                    <div class="chart-box">
+                        <h3>Minimum ELR2B2 Points Required per Course</h3>
+                        <canvas id="barChart" width="300" height="200"></canvas>
+                    </div>
+
+                    <!-- Line Chart Container -->
+                    <div class="chart-box">
+                        <h3>Students Performing Well in Each Course</h3>
+                        <canvas id="lineChart" width="300" height="200"></canvas>
+                    </div>
+
+                
+                </div>
+            </section>
+        </main>
+    
+        <script src="js/Homepage.js"></script>
+    </div>
+
+   
+
+</body>
+</html>
